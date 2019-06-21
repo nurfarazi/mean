@@ -1,5 +1,5 @@
 const bcrypt = require('bcrypt');
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 const User = require('../models/user.model');
 
 const userSchema = Joi.object({
