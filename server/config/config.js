@@ -1,4 +1,4 @@
-const Joi = require('joi');
+const Joi = require('@hapi/joi');
 
 // require and configure dotenv, will load vars in .env in PROCESS.ENV
 require('dotenv').config();
@@ -39,6 +39,12 @@ const config = {
   mongo: {
     host: envVars.MONGO_HOST,
     port: envVars.MONGO_PORT
+  },
+  mongoOptions: {
+    keepAlive: 1,
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
   }
 };
 
